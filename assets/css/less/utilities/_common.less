@@ -151,11 +151,49 @@ img.full-image {
 
   h1,
   h2 {
-    font-weight: 400;
+    font-family: @font-secondary;
+    font-weight: 400 !important;
     font-size: 48px;
     margin-bottom: 20px;
-    text-transform: capitalize;
+    text-transform: uppercase !important;
     color: @primary-color;
+    font-style: normal;
+    line-height: normal;
+  }
+
+  h1 {
+    color: @button-color !important;
+  }
+
+  h1::first-line {
+    color: #fff !important;
+  }
+
+  h2 {
+    color: @heading-h3-color;
+    margin-bottom: 0;
+    font-size: 32px;
+    font-weight: 700 !important;
+    margin: 10px 0 12px;
+  }
+
+  h4 {
+    font-family: @font-second !important;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+
+  h5 {
+    color: @heading-h5-color !important;
+    font-size: 14px;
+    font-family: @font-second;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 124%;
+    text-transform: uppercase;
+    margin-bottom: 0;
   }
 
   ul,
@@ -177,10 +215,43 @@ img.full-image {
 
   h3 {
     &:first-of-type {
-      font-weight: 500;
-      font-size: 17px;
-      margin-bottom: 10px;
+      font-family: @font-second !important;
+      color: @heading-h3-color;
+      font-weight: 600;
+      font-size: 16px;
+      // margin-bottom: 10px;
       text-transform: uppercase;
+    }
+  }
+
+  p {
+    font-family: @font-first;
+    color: @paragraph-color;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 175%;
+    text-transform: capitalize;
+  }
+
+  a {
+    color: @button-color;
+    font-size: 15px;
+    font-family: @font-primary;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    i {
+      font-size: 20px;
+      color: #fff;
+      margin-right: 10px;
     }
   }
 }

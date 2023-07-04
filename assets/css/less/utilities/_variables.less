@@ -1,16 +1,28 @@
 @primary-color: #1b86ff;
 @secondary-color: #152636;
+@sub-menu-color: #504d4d;
+@button-color: #bd08fa;
+@heading-h3-color: #5e6b6f;
+@heading-h5-color: #767676;
+@telephone-color: #c7c7c7;
+@paragraph-color: #7a7a7a;
+@swiper-color: #525657;
 
 @theme-bg-light: #efefef;
 @bg-color: @primary-color;
+@bg-color-primary: #14191b;
 
 @font-color: #000;
-@font-primary:  'Montserrat', sans-serif;
-@font-secondary: 'Bebas Neue', cursive;
+@font-primary: "Josefin Sans", sans-serif;
+@font-secondary: "Philosopher", sans-serif;
+@font-first: "Open Sans", sans-serif;
+@font-second: "Poppins", sans-serif;
 
 @btn-color: @primary-color;
 
 @default-margin: 100px;
+
+@default-padding: 100px;
 
 @theme-radius: 0px;
 
@@ -20,14 +32,15 @@
 @mobile-tab-device-width: 1024px;
 @tablet-device-width: 1024px;
 
-@mobile: ~'screen and (max-width: '+@mobile-device-width+')';
-@mobileTab: ~'screen and (max-width: '+@mobile-tab-device-width+')';
-@tablet: ~'screen and (min-width: 768px) and (max-width: '+@tablet-device-width+')';
-@ipadLandscape: ~ 'screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1)';
-@destop1280: ~'screen and (min-width: 1280px) and (max-width: 1366px)';
+@mobile: ~"screen and (max-width: " + @mobile-device-width+ ")";
+@mobileTab: ~"screen and (max-width: " + @mobile-tab-device-width+ ")";
+@tablet: ~"screen and (min-width: 768px) and (max-width: " + @tablet-device-width+
+  ")";
+@ipadLandscape: ~"screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1)";
+@destop1280: ~"screen and (min-width: 1280px) and (max-width: 1366px)";
 
-.fontawesome(@content: '') {
-    content: @content;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
+.fontawesome(@content: "") {
+  content: @content;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
 }

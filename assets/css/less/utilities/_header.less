@@ -75,7 +75,7 @@ header.main-header {
 
         li {
           &:not(:last-child) {
-            margin-right: 70px;
+            margin-right: 24px;
 
             @media @mobileTab {
               margin-right: 0px;
@@ -85,10 +85,13 @@ header.main-header {
 
           a {
             text-transform: capitalize;
-            font-family: @font-secondary;
-            font-size: 20px;
+            font-family: @font-primary;
+            font-weight: 700;
+            font-size: 13px;
             line-height: normal;
             color: #fff;
+            text-transform: uppercase;
+            padding: 10px 20px;
           }
 
           &.menu-item-has-children {
@@ -101,6 +104,7 @@ header.main-header {
                 font-weight: 900;
                 margin-left: 10px;
                 .transitions(400ms);
+                color: @sub-menu-color;
               }
             }
 
@@ -202,9 +206,14 @@ header.main-header {
     }
 
     .theme-btn {
-      padding: 10px 30px;
+      font-family: @font-primary;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 15px 20px;
       font-weight: 400;
       margin-left: 70px;
+      background: @button-color;
+      border-radius: 100px;
 
       @media @mobileTab {
         margin-top: 20px;
