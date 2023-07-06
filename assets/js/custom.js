@@ -72,7 +72,7 @@ jQuery(document).ready(function ($) {
 
   // Sticky Menu
   let windowWidth = $(window).width();
-  if (windowWidth >= 1025) {
+  if (windowWidth >= 0) {
     $(window).scroll(function (event) {
       stickyMenu();
     });

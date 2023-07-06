@@ -24,9 +24,9 @@ header.main-header {
   }
 
   @media @mobileTab {
-    &::before {
-      content: unset;
-    }
+    // &::before {
+    //   content: unset;
+    // }
 
     .mobile-nav {
       display: block;
@@ -152,13 +152,14 @@ header.main-header {
               position: absolute;
               opacity: 0;
               .transitions();
-              width: 300px;
+              width: 150px;
               z-index: 10;
               background-color: @button-color;
               z-index: 10;
-              padding: 0px 10px;
+              padding: 0px 0px;
               top: 35px;
               left: -18px;
+              border-radius: 4px;
 
               &::before {
                 content: "";
@@ -167,7 +168,7 @@ header.main-header {
                 border-left: solid 10px transparent;
                 border-right: solid 10px transparent;
                 top: -10px;
-                left: 30px;
+                left: 75px;
               }
 
               li {
@@ -179,12 +180,12 @@ header.main-header {
                 border-bottom: solid 1px #fff;
 
                 a {
-                  padding: 10px 10px;
+                  padding: 10px 120px 10px 20px;
                   display: inline-block;
                   color: #fff;
 
                   &:hover {
-                    background-color: @primary-color;
+                    // background-color: @primary-color;
                     color: #fff;
                   }
                 }

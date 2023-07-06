@@ -11,8 +11,6 @@
           <?php the_field('contact_banner_content'); ?>
         </div>
       </div>
-    </div>
-  </div>
 </section>
 
 <section class="sub-page-form">
