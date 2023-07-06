@@ -11,9 +11,9 @@
                     <?php the_field('banner_content'); ?>
                 </div>
             </div>
-            <div class="col-sm-12 col-lg-6">
+            <div class="col-sm-12 col-lg-3">
                 <div class="banner-contact">
-                    <?php if ($telephone = get_field('telephone_1', 'option')) : ?>
+                    <?php if ($telephone = get_field('telephone_2', 'option')) : ?>
                         <div class="content-wrapper">
                             <h5><?php echo get_field('location_first'); ?>:</h5>
                         </div>
@@ -21,9 +21,9 @@
                     <?php endif; ?>
                 </div>
             </div>
-            <div class="col-sm-12 col-lg-6">
+            <div class="col-sm-12 col-lg-9">
                 <div class="banner-contact">
-                    <?php if ($telephone = get_field('telephone_2', 'option')) : ?>
+                    <?php if ($telephone = get_field('telephone_1', 'option')) : ?>
                         <div class="content-wrapper">
                             <h5><?php echo get_field('location_second'); ?>:</h5>
                         </div>
@@ -71,15 +71,23 @@
                     </div>
                     <div class="swiper" id="testimonialsSwiper">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <?php while (have_rows('approach_testimonials')) : the_row(); ?>
+                            <?php while (have_rows('approach_testimonials')) : the_row(); ?>
+                                <div class="swiper-slide">
+                                    <div class="stars">
+                                        <?php
+                                        $starRating = get_sub_field('star_rating');
+                                        for ($i = 0; $i < $starRating; $i++) {
+                                            echo '<div class="rating-star"><i class="fa-solid fa-star"></i></div>';
+                                        }
+                                        ?>
+                                    </div>
                                     <?php if (get_sub_field('testimonial_content')) : ?>
                                         <?php $name = nl2br(get_sub_field('testimonial_content')); ?>
-                                        <p class="circle name"><?php echo $name; ?></p>
+                                        <p class=""><?php echo $name; ?></p>
                                     <?php endif; ?>
-                                    <p><?php the_sub_field('testimonial_name'); ?></p>
-                                <?php endwhile; ?>
-                            </div>
+                                    <p class="testimonial-name"><?php the_sub_field('testimonial_name'); ?></p>
+                                </div>
+                            <?php endwhile; ?>
                         </div>
                     </div>
                 </div>
@@ -95,32 +103,22 @@
                 <?php the_field('service_content'); ?>
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm-12 col-md-4 col-lg-4">
-                <div class="service-image">
-                    <?php getImage(get_field('service_image_1'), 'full-image bg'); ?>
-                    <div class="service-content">
-                        <h2><?php the_field('service_first'); ?></h2>
+
+        <div class="swiper" id="serviceSwiper">
+            <div class="swiper-wrapper">
+                <?php while (have_rows('services')) : the_row(); ?>
+                    <div class="swiper-slide" style="margin-right: 36px;">
+                        <div class="service-image">
+                            <?php getImage(get_sub_field('service_image'), 'full-image bg'); ?>
+                            <div class="service-name">
+                                <p><?php the_sub_field('service_name'); ?></p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-4 col-lg-4">
-                <div class="service-image">
-                    <?php getImage(get_field('service_image_2'), 'full-image bg'); ?>
-                    <div class="service-content">
-                        <h2><?php the_field('service_second'); ?></h2>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-4 col-lg-4">
-                <div class="service-image">
-                    <?php getImage(get_field('service_image_3'), 'full-image bg'); ?>
-                    <div class="service-content">
-                        <h2><?php the_field('service_third'); ?></h2>
-                    </div>
-                </div>
+                <?php endwhile; ?>
             </div>
         </div>
+
         <div class="container">
             <div class="content-wrapper">
                 <?php if ($link = get_field('service_link')) : ?>
@@ -167,6 +165,34 @@
                             <div class="content-wrapper">
                                 <h2><?php the_field('location_first'); ?></h2>
                             </div>
+                            <?php if ($telephone = get_field('telephone_2', 'option')) : ?>
+                                <div class="contact-row">
+                                    <h6>PHONE:</h6>
+                                    <a href="tel:<?php echo $telephone; ?>"><?php echo $telephone; ?></a>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($address = get_field('address_2', 'option')) : ?>
+                                <div class="contact-row">
+                                    <h6>ADDRESS:</h6>
+                                    <p><?php echo nl2br($address); ?></p>
+                                </div>
+                            <?php endif; ?>
+                            <div class="content-wrapper">
+                                <?php if ($link = get_field('location_link_2')) : ?>
+                                    <a href="<?php echo $link['url']; ?>"><i class="fa-regular fa-circle-right"></i><?php echo $link['title']; ?></a>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-12 col-lg-6">
+                    <div class="location-image">
+                        <?php getImage(get_field('location_image_2'), 'full-image bg'); ?>
+                        <div class="location-content">
+                            <div class="content-wrapper">
+                                <h2><?php the_field('location_second'); ?></h2>
+                            </div>
                             <?php if ($telephone = get_field('telephone_1', 'option')) : ?>
                                 <div class="contact-row">
                                     <h6>PHONE:</h6>
@@ -181,33 +207,6 @@
                             <?php endif; ?>
                             <div class="content-wrapper">
                                 <?php if ($link = get_field('location_link_1')) : ?>
-                                    <a href="<?php echo $link['url']; ?>"><i class="fa-regular fa-circle-right"></i><?php echo $link['title']; ?></a>
-                                <?php endif; ?>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-lg-6">
-                    <div class="location-image">
-                        <?php getImage(get_field('location_image_2'), 'full-image bg'); ?>
-                        <div class="location-content">
-                            <div class="content-wrapper">
-                                <h2><?php the_field('location_second'); ?></h2>
-                            </div>
-                            <?php if ($telephone = get_field('telephone_2', 'option')) : ?>
-                                <div class="contact-row">
-                                    <h6>PHONE:</h6>
-                                    <a href="tel:<?php echo $telephone; ?>"><?php echo $telephone; ?></a>
-                                </div>
-                            <?php endif; ?>
-                            <?php if ($address = get_field('address_1', 'option')) : ?>
-                                <div class="contact-row">
-                                    <h6>ADDRESS:</h6>
-                                    <p><?php echo nl2br($address); ?></p>
-                                </div>
-                            <?php endif; ?>
-                            <div class="content-wrapper">
-                                <?php if ($link = get_field('location_link_2')) : ?>
                                     <a href="<?php echo $link['url']; ?>"><i class="fa-regular fa-circle-right"></i><?php echo $link['title']; ?></a>
                                 <?php endif; ?>
                             </div>
@@ -255,14 +254,16 @@
 <?php endif; ?>
 
 <section class="instagram-section" id="">
-
-    <div class="row">
-        <div class="col-lg-3">
+    <div class="instagram-images">
+        <div class="instagram">
             <div class="instagram-image">
                 <?php getImage(get_field('instagram_1'), 'full-image bg'); ?>
+                <?php if ($link = get_field('instagram_link')) : ?>
+                    <a class="full-link" href="<?php echo $link['url']; ?>"></a>
+                <?php endif; ?>
             </div>
         </div>
-        <div class="col-lg-3">
+        <div class="instagram">
             <div class="instagram-image">
                 <?php getImage(get_field('instagram_2'), 'full-image bg'); ?>
                 <div class="content-wrapper">
@@ -271,16 +272,25 @@
                         <a href="<?php echo $link['url']; ?>"><?php echo $link['title']; ?></a>
                     <?php endif; ?>
                 </div>
+                <?php if ($link = get_field('instagram_link')) : ?>
+                    <a class="full-link" href="<?php echo $link['url']; ?>"></a>
+                <?php endif; ?>
             </div>
         </div>
-        <div class="col-lg-3">
+        <div class="instagram">
             <div class="instagram-image">
                 <?php getImage(get_field('instagram_3'), 'full-image bg'); ?>
+                <?php if ($link = get_field('instagram_link')) : ?>
+                    <a class="full-link" href="<?php echo $link['url']; ?>"></a>
+                <?php endif; ?>
             </div>
         </div>
-        <div class="col-lg-3">
+        <div class="instagram">
             <div class="instagram-image">
                 <?php getImage(get_field('instagram_4'), 'full-image bg'); ?>
+                <?php if ($link = get_field('instagram_link')) : ?>
+                    <a class="full-link" href="<?php echo $link['url']; ?>"></a>
+                <?php endif; ?>
             </div>
         </div>
     </div>

@@ -6,6 +6,10 @@ header.main-header {
   width: 100%;
   z-index: 100;
 
+  .mobile-nav {
+    display: none;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -23,11 +27,29 @@ header.main-header {
     &::before {
       content: unset;
     }
+
+    .mobile-nav {
+      display: block;
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #fff;
+        width: 50px;
+        height: 50px;
+      }
+
+      i {
+        color: #fff;
+        font-size: 32px;
+      }
+    }
   }
 
   &.sticky {
-    position: fixed;
-    border-bottom: solid 1px fade(@primary-color, 50%);
+    position: sticky;
+    border-bottom: solid 1px fade(#000, 50%);
     mix-blend-mode: unset;
 
     &::before {
@@ -47,14 +69,18 @@ header.main-header {
     justify-content: space-between;
 
     @media @mobileTab {
-      justify-content: center;
-      flex-direction: column;
+      justify-content: space-between;
+      flex-direction: row;
     }
 
     .right {
       display: flex;
       align-items: center;
       justify-content: flex-end;
+
+      @media @mobileTab {
+        display: none;
+      }
     }
 
     .logo-wrapper {
@@ -128,7 +154,7 @@ header.main-header {
               .transitions();
               width: 300px;
               z-index: 10;
-              background-color: @primary-color;
+              background-color: @button-color;
               z-index: 10;
               padding: 0px 10px;
               top: 35px;
@@ -137,7 +163,7 @@ header.main-header {
               &::before {
                 content: "";
                 position: absolute;
-                border-bottom: solid 10px @primary-color;
+                border-bottom: solid 10px @button-color;
                 border-left: solid 10px transparent;
                 border-right: solid 10px transparent;
                 top: -10px;
