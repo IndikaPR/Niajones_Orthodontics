@@ -3,6 +3,7 @@ section.banner-section {
   padding: 250px 0;
   background-color: #000;
   margin-top: 0;
+  filter: brightness(88%);
 
   @media @mobileTab {
     text-align: center;
@@ -12,7 +13,7 @@ section.banner-section {
   .full-image {
     pointer-events: none;
     width: 100%;
-    opacity: 0.8;
+    opacity: 1;
 
     @media @mobileTab {
       width: 100%;
@@ -53,10 +54,14 @@ section.banner-section {
       align-items: flex-end;
       width: 50%;
 
+      div:nth-child(3) {
+        margin-left: -115px;
+      }
+
       @media @mobileTab {
         width: 100%;
 
-        .col-lg-3 {
+        .col-lg-6 {
           margin-bottom: 50px;
         }
       }
@@ -64,7 +69,7 @@ section.banner-section {
       .banner-contact {
         a {
           color: @telephone-color;
-          font-size: 20px;
+          font-size: 22px;
           font-family: @font-second;
           font-style: normal;
           font-weight: 600;
@@ -82,9 +87,14 @@ section.banner-section {
     }
 
     h1 {
-      font-size: 60px;
+      font-size: 67px;
       color: #fff;
       margin-bottom: 40px;
+    }
+
+    h5 {
+      font-size: 16px;
+      margin-bottom: 2px;
     }
   }
 
@@ -113,6 +123,28 @@ section.about-section {
       max-width: 80%;
       margin: 0px auto 35px;
 
+      h2 {
+        margin-bottom: 3px;
+        font-size: 37px;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      h4 {
+        margin-bottom: 30px;
+      }
+
+      p {
+        line-height: 180%;
+      }
+
+      a {
+        margin-top: -5px;
+      }
+
       @media @mobileTab {
         max-width: 100%;
       }
@@ -132,13 +164,13 @@ section.approach-section {
       top: -3px;
       left: 0;
       width: 100%;
-      height: 20%;
+      height: 22%;
       z-index: -1;
     }
 
     .row {
       .left {
-        margin-top: 60px;
+        margin-top: 80px;
         padding-right: 0;
 
         @media @mobileTab {
@@ -154,7 +186,7 @@ section.approach-section {
       .right {
         background: #fff;
         margin-bottom: 50px;
-        padding: 90px 40px 0px 50px;
+        padding: 110px 40px 0px 50px;
       }
 
       .approach-image {
@@ -174,8 +206,21 @@ section.approach-section {
           text-align: center;
         }
 
+        h2 {
+          margin-bottom: 10px;
+          font-size: 37px;
+          line-height: 132%;
+        }
+
+        h3 {
+          font-size: 16px;
+          font-weight: 600;
+        }
+
         p {
           text-align: left;
+          margin-bottom: 30px;
+          line-height: 177%;
 
           @media @mobileTab {
             text-align: center;
@@ -185,6 +230,9 @@ section.approach-section {
         a {
           justify-content: left;
           color: #000;
+          margin-top: 10px;
+          margin-bottom: 50px;
+          font-weight: 700;
 
           @media @mobileTab {
             justify-content: center;
@@ -200,6 +248,7 @@ section.approach-section {
         @media @mobileTab {
           .stars {
             text-align: center;
+            padding-left: 10px;
           }
         }
 
@@ -207,6 +256,10 @@ section.approach-section {
           color: @button-color;
           margin-right: 10px;
           display: inline;
+
+          &:first-child {
+            margin-left: 11px;
+          }
 
           i {
             width: 18px;
@@ -236,6 +289,7 @@ section.approach-section {
           font-family: @font-secondary;
           font-style: normal;
           text-transform: lowercase;
+          font-size: 16px;
         }
       }
     }
@@ -246,7 +300,8 @@ section.service-section {
   text-align: center;
   background: #000;
   margin-top: 0;
-  padding: @default-padding 0;
+  padding-top: 85px;
+  padding-bottom: 100px;
 
   @media @mobileTab {
     padding: 50px 0;
@@ -260,6 +315,7 @@ section.service-section {
     position: relative;
     width: 100%;
     padding-top: 120%;
+    margin-bottom: 70px;
 
     &:not(:last-child) {
       margin-right: 15px;
@@ -272,13 +328,17 @@ section.service-section {
       left: 0;
       width: 100%;
       height: 20%;
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 38.02%, #000 99.48%);
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 58.02%,
+        #000 180.48%
+      );
       z-index: 5;
     }
 
     .service-name {
       position: absolute;
-      top: 88%;
+      top: 93%;
       left: 50%;
       width: 100%;
       transform: translate(-50%, -50%);
@@ -286,7 +346,7 @@ section.service-section {
       p {
         font-family: @font-secondary;
         font-weight: 400 !important;
-        font-size: 48px;
+        font-size: 36px;
         margin-bottom: 20px;
         text-transform: uppercase !important;
         color: #fff;
@@ -297,10 +357,27 @@ section.service-section {
   }
 
   .content-wrapper {
-    margin-top: 65px;
-
     h2 {
       color: #e0e0e0;
+      margin-bottom: 10px;
+      font-size: 37px;
+      line-height: 115%;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: -8px;
+    }
+
+    p {
+      text-align: left;
+      margin-bottom: 30px;
+      line-height: 177%;
+
+      @media @mobileTab {
+        text-align: center;
+      }
     }
 
     a {
@@ -316,7 +393,7 @@ section.service-section {
 
 section.contact-section {
   background-color: #000;
-  padding: 250px 0 @default-padding;
+  padding: 300px 0 @default-padding;
   margin-top: 0;
   text-align: left;
   width: 100%;
@@ -347,6 +424,13 @@ section.contact-section {
 
     h2 {
       color: #e0e0e0;
+      font-size: 34px;
+      line-height: 115%;
+    }
+
+    h3 {
+      font-size: 16px;
+      margin-bottom: -5px;
     }
 
     p {
@@ -377,10 +461,22 @@ section.contact-section {
 section.location-section {
   text-align: center;
   margin-top: 0;
-  padding: 100px 0;
+  padding-top: 85px;
+  padding-bottom: 85px;
 
   @media @mobileTab {
     padding: 50px 0;
+  }
+
+  .content-wrapper {
+    h2 {
+      font-size: 36px;
+      line-height: 115%;
+    }
+
+    h3 {
+      margin-bottom: -5px;
+    }
   }
 
   &::before {
@@ -390,7 +486,7 @@ section.location-section {
     bottom: -5px;
     left: 0;
     width: 100%;
-    height: 26%;
+    height: 29%;
     z-index: -1;
   }
 
@@ -406,7 +502,7 @@ section.location-section {
     .location-image {
       position: relative;
       width: 100%;
-      padding-top: 130%;
+      padding-top: 110%;
 
       &::before {
         content: "";
@@ -414,7 +510,7 @@ section.location-section {
         bottom: 0;
         left: 0;
         width: 100%;
-        height: 25%;
+        height: 40%;
         background: linear-gradient(
           180deg,
           rgba(0, 0, 0, 0) 44.27%,
@@ -429,7 +525,7 @@ section.location-section {
 
       .location-content {
         position: absolute;
-        top: 65%;
+        top: 55%;
         left: 0;
         width: 100%;
         z-index: 5;
@@ -444,9 +540,14 @@ section.location-section {
             font-size: 36px;
             margin-bottom: 20px;
           }
+
           a {
             color: #fff;
+            font-size: 17px;
+            font-weight: 400;
+
             i {
+              font-size: 24px;
               color: @button-color;
             }
           }
@@ -460,6 +561,7 @@ section.location-section {
           a {
             color: #fff;
             text-transform: uppercase;
+            font-weight: 400;
           }
         }
       }
@@ -471,16 +573,30 @@ section.started-section {
   background: #000;
   text-align: center;
   margin: 0;
-  padding: 50px 0 50px;
+  padding-bottom: 50px;
 
   .content-wrapper {
     h2 {
       color: #fff;
     }
+
+    h2 {
+      font-size: 40px;
+      line-height: 110%;
+    }
+
+    h3 {
+      font-size: 18px;
+      margin-bottom: -8px;
+    }
+
     a {
       margin-top: 30px;
       color: #fff;
+      font-size: 17px;
+
       i {
+        font-size: 24px;
         color: @button-color;
       }
     }
@@ -551,10 +667,10 @@ section.instagram-section {
           margin: 0;
           color: #fff;
           text-align: center;
-          font-size: 28px;
+          font-size: 20px;
           font-family: @font-primary;
           font-style: normal;
-          font-weight: 600;
+          font-weight: 400;
           line-height: normal;
           text-transform: uppercase;
         }

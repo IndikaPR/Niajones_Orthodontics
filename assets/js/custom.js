@@ -3,10 +3,10 @@ jQuery(document).ready(function ($) {
 
   new Swiper("#testimonialsSwiper", {
     loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 5000,
+    //   disableOnInteraction: false,
+    // },
     slidesPerView: 1,
     speed: 500,
     preventClicksPropagation: false,
@@ -14,10 +14,10 @@ jQuery(document).ready(function ($) {
 
   new Swiper("#serviceSwiper", {
     loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 5000,
+    //   disableOnInteraction: false,
+    // },
     slidesPerView: 3,
     spaceBetween: 16,
     speed: 500,
@@ -43,10 +43,10 @@ jQuery(document).ready(function ($) {
 
   new Swiper("#partnersSwiper", {
     loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 5000,
+    //   disableOnInteraction: false,
+    // },
     slidesPerView: 5,
     speed: 500,
     preventClicksPropagation: false,

@@ -36,7 +36,7 @@
 					<p class="footer-topics"><?php the_field('office_frist', 'option'); ?></p>
 				<?php endif; ?>
 				<?php if ($telephone = get_field('telephone_1', 'option')) : ?>
-					<div class="contact-row">
+					<div class="contact-row telephone">
 						<i class="fa-solid fa-phone-volume phone"></i>
 						<a href="tel:<?php echo $telephone; ?>"><?php echo $telephone; ?></a>
 					</div>
@@ -59,7 +59,7 @@
 					<p class="footer-topics"><?php the_field('office_second', 'option'); ?></p>
 				<?php endif; ?>
 				<?php if ($telephone = get_field('telephone_2', 'option')) : ?>
-					<div class="contact-row">
+					<div class="contact-row telephone">
 						<i class="fa-solid fa-phone-volume phone"></i>
 						<a href="tel:<?php echo $telephone; ?>"><?php echo $telephone; ?></a>
 					</div>

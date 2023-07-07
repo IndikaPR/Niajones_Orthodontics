@@ -11,7 +11,7 @@
                     <?php the_field('banner_content'); ?>
                 </div>
             </div>
-            <div class="col-sm-12 col-lg-3">
+            <div class="col-sm-12 col-lg-6">
                 <div class="banner-contact">
                     <?php if ($telephone = get_field('telephone_2', 'option')) : ?>
                         <div class="content-wrapper">
@@ -21,7 +21,7 @@
                     <?php endif; ?>
                 </div>
             </div>
-            <div class="col-sm-12 col-lg-9">
+            <div class="col-sm-12 col-lg-6">
                 <div class="banner-contact">
                     <?php if ($telephone = get_field('telephone_1', 'option')) : ?>
                         <div class="content-wrapper">
@@ -157,8 +157,8 @@
             <div class="content-wrapper">
                 <?php the_field('location_content'); ?>
             </div>
-            <div class="row">
-                <div class="col-sm-12 col-lg-6">
+            <div class="row ">
+                <div class="col-sm-12 col-lg-6 px-3">
                     <div class="location-image">
                         <?php getImage(get_field('location_image_1'), 'full-image bg'); ?>
                         <div class="location-content">
@@ -186,7 +186,7 @@
                     </div>
                 </div>
 
-                <div class="col-sm-12 col-lg-6">
+                <div class="col-sm-12 col-lg-6 px-3">
                     <div class="location-image">
                         <?php getImage(get_field('location_image_2'), 'full-image bg'); ?>
                         <div class="location-content">
