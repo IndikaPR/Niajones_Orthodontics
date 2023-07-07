@@ -1,6 +1,13 @@
+section.sub-page-banner {
+  @media @mobileTab {
+    padding-top: 80px;
+    padding-bottom: 50px;
+  }
+}
+
 section.team-section {
   background: #000;
-  margin-top: 0;
+  margin-top: -5px;
   padding: @default-padding 0;
   filter: brightness(90%);
 
@@ -72,21 +79,14 @@ section.team-section {
       text-transform: none !important;
     }
 
-    h3 {
-      &:first-of-type {
-        font-family: @font-second !important;
-        color: #fff;
-        font-weight: 600;
-        font-size: 13px;
-        margin-bottom: 10px;
-        text-transform: none;
-        line-height: 2;
-      }
-    }
-
     p {
-      text-transform: none;
+      font-family: @font-second !important;
       color: #fff;
+      font-weight: 600;
+      font-size: 13px;
+      margin-bottom: 10px;
+      text-transform: none;
+      line-height: 2;
     }
   }
 }

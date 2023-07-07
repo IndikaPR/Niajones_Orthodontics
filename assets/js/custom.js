@@ -3,21 +3,38 @@ jQuery(document).ready(function ($) {
 
   new Swiper("#testimonialsSwiper", {
     loop: true,
-    // autoplay: {
-    //   delay: 5000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
     slidesPerView: 1,
     speed: 500,
     preventClicksPropagation: false,
+
+    breakpoints: {
+      0: {
+        slidesPerView: "auto",
+        autoHeight: true,
+      },
+      // when window width is >= 840px
+      820: {
+        slidesPerView: "auto",
+        spaceBetween: 16,
+      },
+
+      1024: {
+        slidesPerView: "auto",
+        spaceBetween: 16,
+      },
+    },
   });
 
   new Swiper("#serviceSwiper", {
     loop: true,
-    // autoplay: {
-    //   delay: 5000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
     slidesPerView: 3,
     spaceBetween: 16,
     speed: 500,
@@ -43,10 +60,10 @@ jQuery(document).ready(function ($) {
 
   new Swiper("#partnersSwiper", {
     loop: true,
-    // autoplay: {
-    //   delay: 5000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
     slidesPerView: 5,
     speed: 500,
     preventClicksPropagation: false,

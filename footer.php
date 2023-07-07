@@ -13,7 +13,7 @@
 					<p class="footer-topics"><?php the_field('links_title', 'option'); ?></p>
 				<?php endif; ?>
 				<div class="menu-wrapper">
-					<nav class="navbar navbar-expand-md p-0" id="menu">
+					<nav class="navbar navbar-expand-md p-0">
 						<div id="navbarCollapse">
 							<?php
 							$defaults = array(
@@ -83,9 +83,10 @@
 				<?php endif; ?>
 				<?php while (have_rows('office_hours', 'option')) : the_row(); ?>
 					<?php if (get_sub_field('office_day') && get_sub_field('office_time')) : ?>
-						<div class="content-wrapper">
-							<p class="footer-days"><?php the_sub_field('office_day'); ?> <span class="office-time"><?php the_sub_field('office_time'); ?></span></p>
-						</div>
+						<p class="footer-days">
+							<span><?php the_sub_field('office_day'); ?> </span>
+							<span><?php the_sub_field('office_time'); ?></span>
+						</p>
 					<?php endif; ?>
 				<?php endwhile; ?>
 			</div>

@@ -11,24 +11,23 @@
                     <?php the_field('banner_content'); ?>
                 </div>
             </div>
-            <div class="col-sm-12 col-lg-6">
+            <div class="col-sm-12 col-lg-12">
                 <div class="banner-contact">
-                    <?php if ($telephone = get_field('telephone_2', 'option')) : ?>
-                        <div class="content-wrapper">
-                            <h5><?php echo get_field('location_first'); ?>:</h5>
-                        </div>
-                        <a href="tel:<?php echo $telephone; ?>"><?php echo $telephone; ?></a>
-                    <?php endif; ?>
-                </div>
-            </div>
-            <div class="col-sm-12 col-lg-6">
-                <div class="banner-contact">
-                    <?php if ($telephone = get_field('telephone_1', 'option')) : ?>
-                        <div class="content-wrapper">
-                            <h5><?php echo get_field('location_second'); ?>:</h5>
-                        </div>
-                        <a href="tel:<?php echo $telephone; ?>"><?php echo $telephone; ?></a>
-                    <?php endif; ?>
+                    <div class="location-1"><?php if ($telephone = get_field('telephone_2', 'option')) : ?>
+                            <div class="content-wrapper">
+                                <h5><?php echo get_field('location_first'); ?>:</h5>
+                            </div>
+                            <a href="tel:<?php echo $telephone; ?>"><?php echo $telephone; ?></a>
+                        <?php endif; ?>
+                    </div>
+                    <div class="location-2">
+                        <?php if ($telephone = get_field('telephone_1', 'option')) : ?>
+                            <div class="content-wrapper">
+                                <h5><?php echo get_field('location_second'); ?>:</h5>
+                            </div>
+                            <a href="tel:<?php echo $telephone; ?>"><?php echo $telephone; ?></a>
+                        <?php endif; ?>
+                    </div>
                 </div>
             </div>
         </div>
@@ -42,9 +41,14 @@
                 <?php the_field('about_content'); ?>
             </div>
 
-            <div class="content-wrapper">
+            <div class="section-link">
                 <?php if ($link = get_field('about_link')) : ?>
-                    <a href="<?php echo $link['url']; ?>"><i class="fa-regular fa-circle-right"></i><?php echo $link['title']; ?></a>
+                    <a href="<?php echo $link['url']; ?>">
+                        <span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+                        <?php echo $link['title']; ?>
+                    </a>
                 <?php endif; ?>
             </div>
         </div>
@@ -64,9 +68,15 @@
                 <div class="col-sm-12 col-md-12 col-lg-6 right">
                     <div class="content-wrapper">
                         <?php the_field('approach_content'); ?>
-
+                    </div>
+                    <div class="section-link">
                         <?php if ($link = get_field('approach_link')) : ?>
-                            <a href="<?php echo $link['url']; ?>"><i class="fa-regular fa-circle-right"></i><?php echo $link['title']; ?></a>
+                            <a href="<?php echo $link['url']; ?>">
+                                <span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </span>
+                                <?php echo $link['title']; ?>
+                            </a>
                         <?php endif; ?>
                     </div>
                     <div class="swiper" id="testimonialsSwiper">
@@ -98,7 +108,7 @@
 
 <?php if (get_field('service_content')) : ?>
     <section class="service-section" id="what-they-say">
-        <div class="container">
+        <div class="container content-top">
             <div class="content-wrapper">
                 <?php the_field('service_content'); ?>
             </div>
@@ -120,9 +130,14 @@
         </div>
 
         <div class="container">
-            <div class="content-wrapper">
+            <div class="section-link">
                 <?php if ($link = get_field('service_link')) : ?>
-                    <a href="<?php echo $link['url']; ?>"><i class="fa-regular fa-circle-right"></i><?php echo $link['title']; ?></a>
+                    <a href="<?php echo $link['url']; ?>">
+                        <span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+                        <?php echo $link['title']; ?>
+                    </a>
                 <?php endif; ?>
             </div>
         </div>
@@ -138,12 +153,16 @@
                 <div class="sol-sm-12 col-lg-8">
                     <div class="content-wrapper">
                         <?php the_field('contact_content'); ?>
-                    </div>
-
-                    <div class="content-wrapper">
-                        <?php if ($link = get_field('contact_link')) : ?>
-                            <a href="<?php echo $link['url']; ?>"><i class="fa-regular fa-circle-right"></i><?php echo $link['title']; ?></a>
-                        <?php endif; ?>
+                        <div class="section-link">
+                            <?php if ($link = get_field('contact_link')) : ?>
+                                <a href="<?php echo $link['url']; ?>">
+                                    <span>
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </span>
+                                    <?php echo $link['title']; ?>
+                                </a>
+                            <?php endif; ?>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -177,9 +196,14 @@
                                     <p><?php echo nl2br($address); ?></p>
                                 </div>
                             <?php endif; ?>
-                            <div class="content-wrapper">
+                            <div class="section-link">
                                 <?php if ($link = get_field('location_link_2')) : ?>
-                                    <a href="<?php echo $link['url']; ?>"><i class="fa-regular fa-circle-right"></i><?php echo $link['title']; ?></a>
+                                    <a href="<?php echo $link['url']; ?>">
+                                        <span>
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </span>
+                                        <?php echo $link['title']; ?>
+                                    </a>
                                 <?php endif; ?>
                             </div>
                         </div>
@@ -205,9 +229,14 @@
                                     <p><?php echo nl2br($address); ?></p>
                                 </div>
                             <?php endif; ?>
-                            <div class="content-wrapper">
+                            <div class="section-link">
                                 <?php if ($link = get_field('location_link_1')) : ?>
-                                    <a href="<?php echo $link['url']; ?>"><i class="fa-regular fa-circle-right"></i><?php echo $link['title']; ?></a>
+                                    <a href="<?php echo $link['url']; ?>">
+                                        <span>
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </span>
+                                        <?php echo $link['title']; ?>
+                                    </a>
                                 <?php endif; ?>
                             </div>
                         </div>
@@ -226,9 +255,14 @@
                 <?php the_field('started_content'); ?>
             </div>
 
-            <div class="content-wrapper">
+            <div class="section-link">
                 <?php if ($link = get_field('started_link')) : ?>
-                    <a href="<?php echo $link['url']; ?>"><i class="fa-regular fa-circle-right"></i><?php echo $link['title']; ?></a>
+                    <a href="<?php echo $link['url']; ?>">
+                        <span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+                        <?php echo $link['title']; ?>
+                    </a>
                 <?php endif; ?>
             </div>
         </div>

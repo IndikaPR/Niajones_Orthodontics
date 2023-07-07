@@ -240,7 +240,9 @@ img.full-image {
     line-height: 175%;
     text-transform: capitalize;
   }
+}
 
+.section-link {
   a {
     color: @button-color;
     font-size: 15px;
@@ -254,10 +256,20 @@ img.full-image {
     align-items: center;
     justify-content: center;
 
-    i {
-      font-size: 22px;
-      color: #fff;
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid #fff;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
       margin-right: 10px;
+
+      i {
+        font-size: 12px;
+        color: #fff;
+      }
     }
   }
 }
@@ -486,6 +498,10 @@ section.sub-page-banner {
     }
   }
 
+  #forminator-custom-form-238--page-1 {
+    display: none !important;
+  }
+
   .forminator-button {
     .theme-btn() !important;
     width: 100% !important;
@@ -497,6 +513,12 @@ section.sub-page-banner {
 
     &:hover {
       color: @button-color !important;
+    }
+  }
+
+  .forminator-pagination-footer {
+    .forminator-button-back {
+      margin-bottom: 20px !important;
     }
   }
 
