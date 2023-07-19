@@ -120,6 +120,9 @@
                     <div class="swiper-slide" style="margin-right: 36px;">
                         <div class="service-image">
                             <?php getImage(get_sub_field('service_image'), 'full-image bg'); ?>
+                            <?php if ($link = get_field('service_link')) : ?>
+                                <a class="full-link" href="<?php echo $link['url']; ?>"></a>
+                            <?php endif; ?>
                             <div class="service-name">
                                 <p><?php the_sub_field('service_name'); ?></p>
                             </div>
@@ -180,6 +183,9 @@
                 <div class="col-sm-12 col-lg-6 px-3">
                     <div class="location-image">
                         <?php getImage(get_field('location_image_1'), 'full-image bg'); ?>
+                        <?php if ($link = get_field('location_link_2')) : ?>
+                            <a class="full-link" href="<?php echo $link['url']; ?>"></a>
+                        <?php endif; ?>
                         <div class="location-content">
                             <div class="content-wrapper">
                                 <h2><?php the_field('location_first'); ?></h2>
@@ -213,6 +219,9 @@
                 <div class="col-sm-12 col-lg-6 px-3">
                     <div class="location-image">
                         <?php getImage(get_field('location_image_2'), 'full-image bg'); ?>
+                        <?php if ($link = get_field('location_link_2')) : ?>
+                            <a class="full-link" href="<?php echo $link['url']; ?>"></a>
+                        <?php endif; ?>
                         <div class="location-content">
                             <div class="content-wrapper">
                                 <h2><?php the_field('location_second'); ?></h2>

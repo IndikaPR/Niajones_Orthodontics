@@ -13,7 +13,7 @@ jQuery(document).ready(function ($) {
     autoHeight: true,
 
     breakpoints: {
-      0: {
+      480: {
         slidesPerView: "auto",
         spaceBetween: 16,
       },

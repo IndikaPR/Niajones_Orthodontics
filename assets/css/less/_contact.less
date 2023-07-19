@@ -11,6 +11,10 @@ section.sub-page-form {
   margin-top: 0;
   padding: @default-padding 0;
 
+  @media @mobileTab {
+    padding-bottom: 0;
+  }
+
   .container {
     .content-wrapper {
       p {
@@ -21,6 +25,10 @@ section.sub-page-form {
         text-align: left;
         color: #fff;
         text-transform: none;
+
+        @media @mobile {
+          text-align: center;
+        }
       }
     }
 
@@ -58,18 +66,30 @@ section.sub-page-form {
           margin-bottom: 20px;
           font-weight: 500;
           font-size: 36px;
+
+          @media @mobile {
+            text-align: center;
+          }
         }
 
         p {
           font-family: @font-first;
           font-weight: 600;
           font-size: 14px;
+
+          @media @mobile {
+            text-align: center;
+          }
         }
       }
 
       .contact-form {
         padding-top: 50px;
         padding-left: 50px;
+
+        @media @mobileTab {
+          padding-left: 0;
+        }
       }
     }
   }

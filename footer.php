@@ -7,7 +7,7 @@
 				</a>
 			<?php endif; ?>
 		</div>
-		<div class="footer-up">
+		<div class="footer-top">
 			<div class="quick-links">
 				<?php if (get_field('links_title', 'option')) : ?>
 					<p class="footer-topics"><?php the_field('links_title', 'option'); ?></p>
@@ -92,7 +92,7 @@
 			</div>
 		</div>
 
-		<div class="footer-down">
+		<div class="footer-bottom">
 			<?php get_template_part('templates/social', 'media'); ?>
 
 			<div class="copyrights">
