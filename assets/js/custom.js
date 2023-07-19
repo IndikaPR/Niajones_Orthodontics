@@ -10,11 +10,12 @@ jQuery(document).ready(function ($) {
     slidesPerView: 1,
     speed: 500,
     preventClicksPropagation: false,
+    autoHeight: true,
 
     breakpoints: {
       0: {
         slidesPerView: "auto",
-        autoHeight: true,
+        spaceBetween: 16,
       },
       // when window width is >= 840px
       820: {
