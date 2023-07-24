@@ -1,0 +1,116 @@
+.invisalign-section {
+  margin: 0;
+  padding-top: @default-padding;
+  padding-bottom: 50px;
+  background: #000;
+  color: #fff;
+  text-align: left;
+
+  .container {
+    h3 {
+      font-size: 34px;
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    p {
+      font-weight: 600;
+      font-size: 18px;
+    }
+
+    .row {
+      margin-top: 50px;
+    }
+
+    .content-wrapper {
+      h2 {
+        color: #fff;
+        text-align: center;
+        font-size: 30px;
+        margin-top: 50px;
+        margin-bottom: 24px;
+      }
+    }
+
+    .why-invesalign {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 20px;
+      text-align: center;
+
+      @media @mobileTab {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 20px;
+      }
+
+      .content-wrapper {
+        background: #1c1c1c;
+        padding: 25px;
+
+        h3 {
+          color: #fff;
+          font-family: @font-secondary !important;
+          font-size: 26px;
+          text-transform: capitalize;
+          font-weight: 500;
+          margin-bottom: 35px;
+        }
+
+        p {
+          color: #fff;
+          font-size: 15px;
+          font-weight: 600;
+          text-transform: none;
+        }
+      }
+    }
+  }
+}
+
+.consultant-section {
+  margin: 0;
+  background: #000;
+  padding-bottom: 50px;
+
+  @media @mobileTab {
+    padding-bottom: 0;
+  }
+
+  .container {
+    position: relative;
+
+    .row {
+      .content-wrapper {
+        padding-top: 150px;
+        padding-bottom: @default-padding;
+
+        h2 {
+          color: #fff;
+          font-weight: 500 !important;
+          line-height: 110%;
+        }
+
+        p {
+          color: #fff;
+          text-align: left;
+          font-size: 16px;
+          font-weight: 700;
+          text-transform: none;
+          filter: brightness(90%);
+        }
+
+        .section-link {
+          a {
+            justify-content: left;
+            color: #fff;
+            font-weight: 600;
+
+            &::before {
+              color: @button-color;
+            }
+          }
+        }
+      }
+    }
+  }
+}

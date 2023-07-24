@@ -42,11 +42,11 @@
 							</div>
 						</nav>
 					</div>
+
 					<?php if ($link = get_field('schedule_link', 'option')) : ?>
 						<a href="<?php echo $link['url']; ?>" class="theme-btn call-link"><?php echo $link['title']; ?></a>
 					<?php endif; ?>
 				</div>
-
 				<div class="mobile-nav">
 					<a href="#menu" class="menu"><i class="fa-solid fa-bars"></i></a>
 					<div class="menu-wrapper">
@@ -54,7 +54,7 @@
 							<div id="navbarCollapse">
 								<?php
 								$defaults = array(
-									'menu'            => 'Mobile Menu',
+									'menu'            => 'Main Menu',
 									'container'       => false,
 									'menu_class'      => 'menu',
 									'echo'            => true,

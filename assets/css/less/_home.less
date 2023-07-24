@@ -1,7 +1,7 @@
 section.banner-section {
   position: relative;
-  padding: 250px 0;
-  background-color: #000;
+  padding: 200px 0;
+  background-color: #0d1618;
   margin-top: 0;
   filter: brightness(88%);
 
@@ -12,12 +12,17 @@ section.banner-section {
 
   .full-image {
     pointer-events: none;
-    width: 100%;
     opacity: 1;
+    width: 70%;
+    right: 0;
+    left: auto;
+    object-position: top;
+    mix-blend-mode: lighten;
 
     @media @mobileTab {
       width: 100%;
-      opacity: 0.2;
+      opacity: 1;
+      position: initial;
     }
   }
 
@@ -52,15 +57,6 @@ section.banner-section {
 
     .row {
       align-items: flex-end;
-      max-width: 50%;
-
-      // div:nth-child(3) {
-      //   margin-left: -115px;
-
-      //   @media @mobileTab {
-      //     margin-left: 0;
-      //   }
-      // }
 
       @media @mobileTab {
         max-width: 100%;
@@ -145,6 +141,21 @@ section.about-section {
     padding-top: 50px;
   }
 
+  .section-link {
+    a {
+      justify-content: left;
+      color: @paragraph-color;
+
+      &:hover {
+        color: @button-color;
+      }
+
+      &::before {
+        color: #fff;
+      }
+    }
+  }
+
   .container {
     .content-wrapper {
       max-width: 80%;
@@ -193,6 +204,10 @@ section.approach-section {
       width: 100%;
       height: 22%;
       z-index: -1;
+
+      @media @mobileTab {
+        height: 10%;
+      }
     }
 
     .row {
@@ -276,16 +291,12 @@ section.approach-section {
           justify-content: left;
           color: #000;
 
-          @media @mobileTab {
-            justify-content: center;
+          &::before {
+            color: @button-color;
           }
 
-          span {
-            border: 2px solid @button-color;
-
-            i {
-              color: @button-color;
-            }
+          @media @mobileTab {
+            justify-content: center;
           }
         }
       }
@@ -359,6 +370,10 @@ section.service-section {
 
   .content-top {
     max-width: 60% !important;
+
+    @media @mobile {
+      max-width: 100% !important;
+    }
   }
 
   #serviceSwiper {
@@ -448,12 +463,8 @@ section.service-section {
     a {
       color: #fff;
 
-      span {
-        border: 2px solid @button-color;
-
-        i {
-          color: @button-color;
-        }
+      &::before {
+        color: @button-color;
       }
     }
   }
@@ -468,14 +479,18 @@ section.contact-section {
   height: 100%;
 
   @media @mobileTab {
-    padding: 50px 0 50px;
+    padding: 300px 0 50px;
     margin-top: -2px;
+  }
+
+  @media @mobile {
+    padding-top: 150px;
   }
 
   .full-image {
     @media @mobileTab {
       width: 100%;
-      opacity: 0.2;
+      opacity: 1;
     }
   }
 
@@ -527,12 +542,10 @@ section.contact-section {
 
   .section-link {
     a {
-      span {
-        border: 2px solid @button-color;
+      color: #fff;
 
-        i {
-          color: @button-color;
-        }
+      &::before {
+        color: @button-color;
       }
     }
   }
@@ -551,6 +564,10 @@ section.location-section {
   .content-wrapper {
     max-width: 60%;
     margin: 0 auto;
+
+    @media @mobileTab {
+      max-width: 80%;
+    }
 
     h2 {
       font-size: 36px;
@@ -651,12 +668,9 @@ section.location-section {
         .section-link {
           a {
             color: #fff;
-            span {
-              border: 2px solid @button-color;
 
-              i {
-                color: @button-color;
-              }
+            &::before {
+              color: @button-color;
             }
           }
         }
@@ -674,6 +688,10 @@ section.started-section {
   .content-wrapper {
     max-width: 60%;
     margin: 0 auto;
+
+    @media @mobileTab {
+      max-width: 100%;
+    }
 
     h2 {
       color: #fff;
@@ -704,12 +722,9 @@ section.started-section {
   .section-link {
     a {
       color: #fff;
-      span {
-        border: 2px solid @button-color;
 
-        i {
-          color: @button-color;
-        }
+      &::before {
+        color: @button-color;
       }
     }
   }
@@ -800,5 +815,34 @@ section.instagram-section {
         }
       }
     }
+  }
+}
+
+.fixed-call {
+  font-family: @font-primary;
+  background-color: @button-color;
+  color: #fff;
+  padding: 17px 50px 15px;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  z-index: 1;
+  border: 0;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 30px;
+  line-height: initial;
+  outline: 0;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  z-index: 500;
+  border-radius: 0;
+  width: 100%;
+  display: none;
+
+  @media @mobileTab {
+    display: block;
   }
 }

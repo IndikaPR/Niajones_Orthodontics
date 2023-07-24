@@ -6,7 +6,7 @@
     <?php getImage(get_field('banner_background_image'), 'full-image bg'); ?>
     <div class="container" id="schedule">
         <div class="row">
-            <div class="col-sm-12 col-lg-12">
+            <div class="col-sm-12 col-lg-5">
                 <div class="content-wrapper">
                     <?php the_field('banner_content'); ?>
                 </div>
@@ -44,9 +44,6 @@
             <div class="section-link">
                 <?php if ($link = get_field('about_link')) : ?>
                     <a href="<?php echo $link['url']; ?>">
-                        <span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
                         <?php echo $link['title']; ?>
                     </a>
                 <?php endif; ?>
@@ -72,9 +69,6 @@
                     <div class="section-link">
                         <?php if ($link = get_field('approach_link')) : ?>
                             <a href="<?php echo $link['url']; ?>">
-                                <span>
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </span>
                                 <?php echo $link['title']; ?>
                             </a>
                         <?php endif; ?>
@@ -117,10 +111,10 @@
         <div class="swiper" id="serviceSwiper">
             <div class="swiper-wrapper">
                 <?php while (have_rows('services')) : the_row(); ?>
-                    <div class="swiper-slide" style="margin-right: 36px;">
+                    <div class="swiper-slide">
                         <div class="service-image">
-                            <?php getImage(get_sub_field('service_image'), 'full-image bg'); ?>
-                            <?php if ($link = get_field('service_link')) : ?>
+                            <?php getImage(get_sub_field('service_image'), 'full-image bg', '', false); ?>
+                            <?php if ($link = get_sub_field('service_link')) : ?>
                                 <a class="full-link" href="<?php echo $link['url']; ?>"></a>
                             <?php endif; ?>
                             <div class="service-name">
@@ -134,11 +128,8 @@
 
         <div class="container">
             <div class="section-link">
-                <?php if ($link = get_field('service_link')) : ?>
+                <?php if ($link = get_field('services_link')) : ?>
                     <a href="<?php echo $link['url']; ?>">
-                        <span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
                         <?php echo $link['title']; ?>
                     </a>
                 <?php endif; ?>
@@ -159,9 +150,6 @@
                         <div class="section-link">
                             <?php if ($link = get_field('contact_link')) : ?>
                                 <a href="<?php echo $link['url']; ?>">
-                                    <span>
-                                        <i class="fa-solid fa-arrow-right"></i>
-                                    </span>
                                     <?php echo $link['title']; ?>
                                 </a>
                             <?php endif; ?>
@@ -183,7 +171,7 @@
                 <div class="col-sm-12 col-lg-6 px-3">
                     <div class="location-image">
                         <?php getImage(get_field('location_image_1'), 'full-image bg'); ?>
-                        <?php if ($link = get_field('location_link_2')) : ?>
+                        <?php if ($link = get_field('omaha')) : ?>
                             <a class="full-link" href="<?php echo $link['url']; ?>"></a>
                         <?php endif; ?>
                         <div class="location-content">
@@ -203,11 +191,8 @@
                                 </div>
                             <?php endif; ?>
                             <div class="section-link">
-                                <?php if ($link = get_field('location_link_2')) : ?>
+                                <?php if ($link = get_field('location_link_1')) : ?>
                                     <a href="<?php echo $link['url']; ?>">
-                                        <span>
-                                            <i class="fa-solid fa-arrow-right"></i>
-                                        </span>
                                         <?php echo $link['title']; ?>
                                     </a>
                                 <?php endif; ?>
@@ -219,7 +204,7 @@
                 <div class="col-sm-12 col-lg-6 px-3">
                     <div class="location-image">
                         <?php getImage(get_field('location_image_2'), 'full-image bg'); ?>
-                        <?php if ($link = get_field('location_link_2')) : ?>
+                        <?php if ($link = get_field('location_link_1')) : ?>
                             <a class="full-link" href="<?php echo $link['url']; ?>"></a>
                         <?php endif; ?>
                         <div class="location-content">
@@ -239,11 +224,8 @@
                                 </div>
                             <?php endif; ?>
                             <div class="section-link">
-                                <?php if ($link = get_field('location_link_1')) : ?>
+                                <?php if ($link = get_field('location_link_2')) : ?>
                                     <a href="<?php echo $link['url']; ?>">
-                                        <span>
-                                            <i class="fa-solid fa-arrow-right"></i>
-                                        </span>
                                         <?php echo $link['title']; ?>
                                     </a>
                                 <?php endif; ?>
@@ -267,9 +249,6 @@
             <div class="section-link">
                 <?php if ($link = get_field('started_link')) : ?>
                     <a href="<?php echo $link['url']; ?>">
-                        <span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
                         <?php echo $link['title']; ?>
                     </a>
                 <?php endif; ?>
@@ -338,6 +317,13 @@
         </div>
     </div>
 </section>
+
+<?php if ($telephone = get_field('telephone_1', 'option')) : ?>
+    <div class="fixed-call">
+        <i class="fa-solid fa-phone"></i>
+        <a href="tel:<?php echo $telephone; ?>"><?php echo $telephone; ?></a>
+    </div>
+<?php endif; ?>
 
 
 <?php get_footer(); ?>

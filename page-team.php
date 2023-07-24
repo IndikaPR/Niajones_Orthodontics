@@ -2,16 +2,7 @@
 <?php get_header();
 ?>
 
-<section class="sub-page-banner" id="contact">
-  <?php getImage(get_field('team_banner_image'), 'full-image bg'); ?>
-  <div class="container" id="schedule">
-    <div class="row">
-      <div class="col-sm-12 col-lg-12">
-        <div class="content-wrapper">
-          <?php the_field('team_banner_content'); ?>
-        </div>
-      </div>
-</section>
+<?php get_template_part('templates/sub-page', 'banner'); ?>
 
 <?php if (get_field('team_content')) : ?>
   <section class="team-section" id="welcome">
@@ -42,6 +33,13 @@
       </div>
     </div>
   </section>
+<?php endif; ?>
+
+<?php if ($telephone = get_field('telephone_1', 'option')) : ?>
+  <div class="fixed-call">
+    <i class="fa-solid fa-phone"></i>
+    <a href="tel:<?php echo $telephone; ?>"><?php echo $telephone; ?></a>
+  </div>
 <?php endif; ?>
 
 

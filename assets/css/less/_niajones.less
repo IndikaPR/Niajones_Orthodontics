@@ -1,0 +1,132 @@
+.about-header {
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.nia-jones-section {
+  background: #000;
+  margin-top: 0;
+  padding-top: @default-padding;
+  padding-bottom: 50px;
+  color: #fff;
+
+  .container {
+    .row {
+      margin-bottom: 60px;
+
+      .content-wrapper {
+        padding: 40px 0 40px 0px;
+      }
+    }
+    .content-wrapper {
+      h2 {
+        font-size: 30px;
+        margin-top: 0;
+        color: #fff;
+        font-weight: 400 !important;
+        text-align: center;
+      }
+
+      h3 {
+        font-size: 20px;
+        color: #fff;
+        text-transform: capitalize;
+        margin-bottom: 12px;
+        font-weight: 600;
+        text-align: center;
+      }
+
+      p {
+        font-size: 14px;
+        font-weight: 700;
+        color: #fff;
+        text-align: center;
+        text-transform: none;
+        line-height: 185%;
+        filter: brightness(95%);
+
+        em {
+          font-size: 16px;
+        }
+      }
+
+      ul {
+        @media @mobile {
+          margin-left: 20px;
+        }
+
+        li {
+          font-family: @font-first;
+          font-weight: 500;
+          font-size: 15px;
+          filter: brightness(95%);
+
+          @media @mobile {
+            text-align: left;
+          }
+        }
+      }
+    }
+
+    .simple-text {
+      font-family: @font-first;
+      font-size: 23px;
+      font-weight: 700;
+      max-width: 66%;
+      margin: 0 auto;
+      line-height: 120%;
+      text-align: center;
+      margin-bottom: 50px;
+
+      @media @mobileTab {
+        max-width: 100%;
+      }
+    }
+
+    .image-family {
+      padding-top: 55%;
+      margin-bottom: 70px;
+
+      @media @mobileTab {
+        padding-top: 0;
+      }
+    }
+
+    .sections {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 32px;
+      row-gap: 32px;
+
+      @media @mobileTab {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .content-wrapper {
+        @media @mobile {
+          h2 {
+            text-align: left;
+          }
+
+          p {
+            text-align: left;
+          }
+        }
+
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .section-details {
+      background: #1c1c1c;
+      border-radius: 10px;
+      padding: 50px;
+
+      @media @mobile {
+        padding: 25px;
+      }
+    }
+  }
+}

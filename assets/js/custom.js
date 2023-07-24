@@ -10,22 +10,19 @@ jQuery(document).ready(function ($) {
     slidesPerView: 1,
     speed: 500,
     preventClicksPropagation: false,
-    autoHeight: true,
 
     breakpoints: {
-      480: {
+      380: {
         slidesPerView: "auto",
-        spaceBetween: 16,
+        autoHeight: true,
       },
       // when window width is >= 840px
       820: {
         slidesPerView: "auto",
-        spaceBetween: 16,
       },
 
       1024: {
         slidesPerView: "auto",
-        spaceBetween: 16,
       },
     },
   });
@@ -44,17 +41,18 @@ jQuery(document).ready(function ($) {
     breakpoints: {
       0: {
         slidesPerView: 1,
-        // spaceBetween: 16,
       },
-      // when window width is >= 840px
+      // when window width is >= 820px
       820: {
         slidesPerView: 2,
-        spaceBetween: 16,
+        slidesOffsetBefore: 200,
+        slidesOffsetAfter: 100,
       },
-
+      // when window width is >= 1024px
       1024: {
-        slidesPerView: 3,
-        spaceBetween: 16,
+        slidesPerView: 4,
+        slidesOffsetBefore: 200,
+        slidesOffsetAfter: 200,
       },
     },
   });
@@ -72,11 +70,10 @@ jQuery(document).ready(function ($) {
     breakpoints: {
       0: {
         slidesPerView: 1,
-        // spaceBetween: 20,
       },
 
       767: {
-        slidesPerView: 3,
+        slidesPerView: 2,
         spaceBetween: 20,
       },
       // when window width is >= 840px
@@ -110,10 +107,26 @@ jQuery(document).ready(function ($) {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+  const logoContent = document.querySelector(".logo-wrapper").innerHTML;
+  const socialMediaContent = document.querySelector(
+    ".social-media-wrapper"
+  ).innerHTML;
+
   new Mmenu("#menu", {
     offCanvas: {
       position: "right",
     },
     theme: "light",
+
+    navbars: [
+      {
+        position: "top",
+        content: [logoContent],
+      },
+      {
+        position: "bottom",
+        content: [socialMediaContent],
+      },
+    ],
   });
 });
